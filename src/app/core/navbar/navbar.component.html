@@ -1,0 +1,25 @@
+<nav class="navbar navbar-expand-md navbar-light bg-white">
+  <a class="navbar-brand" routerLink="/" (click)="collapseNavbar()">
+    <img src="assets/images/logo.png" alt="Logo" style="width:160px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+    aria-expanded="false" aria-label="Toggle navigation" (click)="toggleNavbar()">
+    <fa-icon icon="bars"></fa-icon>
+  </button>
+
+  <div class="navbar-collapse collapse" id="navbarResponsive" [ngbCollapse]="isNavbarCollapsed">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="home" (click)="collapseNavbar()">
+          <span>
+            <fa-icon icon="home"></fa-icon>
+            <span>Home</span>
+          </span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">Logout</a>
+      </li>
+    </ul>
+  </div>
+</nav>

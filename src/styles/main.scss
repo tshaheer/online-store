@@ -1,0 +1,25 @@
+/*
+ * Entry point of global application style.
+ * Component-specific style should not go here and be included directly as part of the components.
+ */
+
+
+// 3rd party libraries
+@import '~bootstrap/scss/bootstrap';
+
+// Global CSS HERE
+.btn {
+    cursor: pointer;
+}
+  
+:disabled {
+    cursor: not-allowed;
+}
+  
+.form-control:focus {
+    box-shadow: 0 0 0.1rem #79baff;
+}
+  
+.nav-link, a {
+    cursor: pointer;
+}
