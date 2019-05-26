@@ -1,0 +1,38 @@
+.card .card-body {
+    padding-top: 1.8rem;
+}
+
+.card-title {
+    line-height: 20px;
+    height: 83px;
+    overflow: hidden;
+}
+
+.card-text {
+    line-height: 20px;
+    height: 83px;
+    overflow: hidden;
+}
+
+.card .card-footer {
+    background-color: transparent;
+}
+
+.card .card-footer .left {
+    float: left;
+}
+
+.card .card-footer .right {
+    float: right;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.card .card-footer .right a {
+    color: #757575;
+    margin-left: 1rem;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}

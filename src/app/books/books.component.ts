@@ -6,6 +6,7 @@ import { ToastrService } from 'ngx-toastr';
 
 import { IBook } from '../shared/interfaces';
 import { DataService } from '../core/services/data.service';
+import { CartService } from '../core/services/cart.service';
 
 @Component({
   selector: 'bs-books',
@@ -14,11 +15,14 @@ import { DataService } from '../core/services/data.service';
 })
 export class BooksComponent implements OnInit {
   title: string;
-  filteredBooks: IBook[];
+  filteredBooks: IBook[] = [];
   displayMode: DisplayModeEnum;
   displayModeEnum = DisplayModeEnum;
 
-  constructor(private route: ActivatedRoute, private dataService: DataService, private toastrService: ToastrService) { }
+  constructor(private route: ActivatedRoute, 
+    private dataService: DataService,
+    private toastrService: ToastrService,
+    private cartService: CartService) { }
 
   ngOnInit() {
     this.displayMode = DisplayModeEnum.Card;
@@ -50,8 +54,9 @@ export class BooksComponent implements OnInit {
     this.displayMode = mode;
   }
 
-  addItemToCart() {
-    this.toastrService.success('Book added to the cart', 'Adding Book', {
+  addItemToCart(book: IBook) {
+    this.cartService.addToCart({ book, quantity: 1 })
+    this.toastrService.info('Book successfully added to the cart', 'Add Book to Cart', {
       timeOut: 3000
     });
   }

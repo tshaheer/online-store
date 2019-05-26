@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CartService } from '../services/cart.service';
 
 @Component({
   selector: 'bs-navbar',
@@ -9,7 +10,7 @@ import { Router } from '@angular/router';
 export class NavbarComponent implements OnInit {
   isNavbarCollapsed: boolean;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private cartService: CartService) {
     this.isNavbarCollapsed = true;
   }
 
@@ -31,6 +32,12 @@ export class NavbarComponent implements OnInit {
 
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+
+  toggleCartPopup(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.cartService.toggleCart()
   }
 
 }

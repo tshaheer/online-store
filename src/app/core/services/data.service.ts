@@ -17,9 +17,20 @@ export class DataService {
     return this.http.get<IBook[]>(this.booksBaseUrl, { observe: 'response' });
   }
 
+  getNewBooks(): Observable<HttpResponse<IBook[]>> {
+    return this.getBooks().pipe(map(res => {
+      if (res.body) {
+        return res.clone({ body: res.body.slice(1).slice(-3) });
+      } else {
+        return res;
+      }
+    })
+    );
+  }
+
   getBooksByCategory(category: string): Observable<IBook[]> {
     return this.getBooks().pipe(map(res => {
-      const books = res.body as IBook[];
+      const books: IBook[] = res.body;
       return books.filter((book: IBook) => {
         return book.category.toLowerCase() == category.toLowerCase()
       });

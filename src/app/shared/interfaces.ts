@@ -10,3 +10,8 @@ export interface IBook {
     description: string;
     image: string;
 }
+
+export interface ICart {
+    book: IBook;
+    quantity: number;
+}

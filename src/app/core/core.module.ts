@@ -24,7 +24,7 @@ import { SharedModule } from '../shared/shared.module';
     NgProgressRouterModule, 
     NgProgressHttpModule, 
     BrowserAnimationsModule,
-    ToastrModule.forRoot() 
+    ToastrModule.forRoot(),
   ],
   exports: [NavbarComponent, FooterComponent, 
     RouterModule, 

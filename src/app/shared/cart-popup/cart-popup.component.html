@@ -1,0 +1,45 @@
+<div class="pop-cart-item" *ngFor="let cart of cartList;let i = index">
+  <div class="pop-cart-item-image-wrapper">
+    <img [src]="cart.book.image" class="img-fluid" alt="" />
+  </div>
+  <div class="pop-cart-item-details">
+    <h1 class="pop-cart-item-title">
+      <a href="">{{cart.book.title}} <span class="pop-cart-item-quantity">× {{cart.quantity}}</span></a>
+    </h1>
+    <span class="pop-cart-item-brand">
+      {{cart.book.category}}
+    </span>
+    <span class="pop-cart-item-price">
+      {{cart.book.price | currency :'USD'}}
+    </span>
+  </div>
+  <div class="pop-cart-remove-wrapper">
+    <span (click)="removeFromCart(i)" class="cart-remove">X</span>
+  </div>
+</div>
+<div *ngIf="cartList.length > 0">
+  <div class="cart-total">
+    <div class="cart-total-item">
+      <span class="cart-total-label">
+        Total
+      </span>
+      <span class="cart-total-value">
+        {{totalPrice | currency :'USD'}}
+      </span>
+    </div>
+  </div>
+  <footer class="quick-cart-footer">
+    <div class="quick-cart-footer-cell">
+      <a class="btn btn-outline-secondary btn-block btn-lg text-dark" [routerLink]="['/cart']">
+        View Cart
+      </a>
+    </div>
+
+    <div class="quick-cart-footer-cell">
+      <a class="btn btn-dark btn-block btn-lg text-white">Checkout</a>
+    </div>
+  </footer>
+</div>
+<div *ngIf="cartList.length == 0">
+  <strong class="cart-empty">Your cart is empty</strong>
+</div>

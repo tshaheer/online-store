@@ -13,15 +13,15 @@ import { IBook } from 'src/app/shared/interfaces';
 export class BooksGridComponent implements OnInit {
   @Input() books: IBook[] = [];
 
-  @Output() cartChanged: EventEmitter<void> = new EventEmitter<void>();
+  @Output() cartChanged: EventEmitter<IBook> = new EventEmitter<IBook>();
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  addToCart() {
-    this.cartChanged.emit();
+  addToCart(book: IBook) {
+    this.cartChanged.emit(book);
   }
 
 }

@@ -18,7 +18,7 @@
         <div class="card-footer">
           <span class="left">{{ book.price | currency:'USD'}}</span>
           <span class="right">
-            <a (click)="addToCart()">
+            <a (click)="addToCart(book)">
               <fa-icon icon="cart-plus"></fa-icon>
             </a>
           </span>

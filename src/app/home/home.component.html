@@ -1,3 +1,34 @@
-<p>
-  home works!
-</p>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4 mb-2" *ngFor="let book of books">
+      <div class="card-deck">
+        <div class="card">
+          <a [routerLink]="['/books', book.isbn]">
+            <img [src]="book.image" class="img-fluid" alt="" width="360px" height="540px">
+          </a>
+          <div class="card-body text-center no-padding">
+            <p class="card-title">
+              <strong>
+                {{ book.title }}
+              </strong>
+            </p>
+            <p class="card-text">
+              {{ book.description }}
+            </p>
+          </div>
+          <div class="card-footer">
+            <span class="left">{{ book.price | currency:'USD'}}</span>
+            <span class="right">
+              <a (click)="addToCart(book)">
+                <fa-icon icon="cart-plus"></fa-icon>
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col text-center mt-5" *ngIf="!books.length">
+      <h3>No Books Found</h3>
+    </div>
+  </div>
+</div>
