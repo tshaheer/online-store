@@ -5,7 +5,6 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   { path: 'home', loadChildren: './home/home.module#HomeModule' },
   { path: 'books', loadChildren: './books/books.module#BooksModule' },
-  { path: 'category', loadChildren: './category/category.module#CategoryModule' },
   { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'cart', loadChildren: './cart/cart.module#CartModule' },
   { path: '', pathMatch: 'full' , redirectTo: 'home' },
