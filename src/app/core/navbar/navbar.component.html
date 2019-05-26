@@ -32,25 +32,25 @@
         </a>
         <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="category-menu">
           <li>
-            <a class="dropdown-item" routerLink="category" (click)="collapseNavbar()">
+            <a class="dropdown-item" [routerLink]="['/books']" [queryParams]="{category: 'J2EE'}" (click)="collapseNavbar()">
               <fa-icon icon="check-circle" fixedWidth="true"></fa-icon>
               <span>J2EE</span>
             </a>
           </li>
           <li>
-            <a class="dropdown-item" routerLink="category" (click)="collapseNavbar()">
+            <a class="dropdown-item" [routerLink]="['/books']" [queryParams]="{category: 'J2ME'}" (click)="collapseNavbar()">
               <fa-icon icon="check-circle" fixedWidth="true"></fa-icon>
               <span>J2ME</span>
             </a>
           </li>
           <li>
-            <a class="dropdown-item" routerLink="category" (click)="collapseNavbar()">
+            <a class="dropdown-item" [routerLink]="['/books']" [queryParams]="{category: 'Java'}" (click)="collapseNavbar()">
               <fa-icon icon="check-circle" fixedWidth="true"></fa-icon>
               <span>Java</span>
             </a>
           </li>
           <li>
-            <a class="dropdown-item" routerLink="category" (click)="collapseNavbar()">
+            <a class="dropdown-item" [routerLink]="['/books']" [queryParams]="{category: 'JDBC'}" (click)="collapseNavbar()">
               <fa-icon icon="check-circle" fixedWidth="true"></fa-icon>
               <span>JDBC</span>
             </a>

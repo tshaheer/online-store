@@ -1,0 +1,15 @@
+<div class="row mt-2">
+  <div class="media border mb-2 text-left" *ngFor="let book of books">
+    <img [src]="book.image" class="align-self-center" alt="" width="260px" height="340px">
+    <div class="media-body">
+      <h5 class="ml-3">{{ book.title }}</h5>
+      <p class="ml-3">
+        {{ book.description }}
+      </p>
+      <p class="ml-3"><strong>{{ book.price | currency:'USD'}}</strong></p>
+      <p>
+          <button class="btn btn-primary ml-3" (click)="addToCart()">Add to Cart</button>
+      </p>
+    </div>
+  </div>
+</div>

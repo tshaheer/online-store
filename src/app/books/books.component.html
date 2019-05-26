@@ -1,3 +1,19 @@
-<p>
-  books works!
-</p>
+<div class="container">
+    <div class="well well-sm text-left">
+      <strong class="title">{{ title }}</strong>
+      <div class="btn-group ml-2">
+        <a class="btn btn-sm btn-outline-secondary" (click)="changeDisplayMode(displayModeEnum.Card)" [class.active]="displayMode === displayModeEnum.Card">
+          <fa-icon icon="th-list"></fa-icon><span class="p-1">Card</span>
+        </a>
+        <a class="btn btn-sm btn-outline-secondary" (click)="changeDisplayMode(displayModeEnum.Grid)" [class.active]="displayMode === displayModeEnum.Grid">
+          <fa-icon icon="th"></fa-icon><span class="p-1">List</span>
+        </a>
+      </div>
+    </div>
+    <bs-books-card [books]="filteredBooks" [hidden]="displayMode !== displayModeEnum.Card" (cartChanged)="addItemToCart($event)"></bs-books-card>
+    <bs-books-grid [books]="filteredBooks" [hidden]="displayMode !== displayModeEnum.Grid" (cartChanged)="addItemToCart($event)"></bs-books-grid>
+
+    <div class="col text-center mt-5" *ngIf="!filteredBooks.length">
+        <h3>No Records Found</h3>
+      </div>
+</div>

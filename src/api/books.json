@@ -1,0 +1,72 @@
+[
+  {
+    "id": 1,
+    "title": "Java 2 Micro Edition (J2ME) Application Development",
+    "pub_date": "2001-11-28",
+    "isbn": "672320959",
+    "category": "J2ME",
+    "price": 49.99,
+    "description": "The key to Java 2 Micro Edition (J2ME) Application Development is the clear, concise explanations of the  J2ME technology in relation to the existing Java platform. This  book assumes proficiency with Java and presents strategies for understanding and deploying J2ME applications. The book presents numerous real-world examples, including health care and financial sector examples from the authors professional experience.",
+    "image": "assets/images/books/j2mead.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Sams Teach Yourself Wireless Java with J2ME in 21 Days",
+    "pub_date": "2001-06-27",
+    "isbn": "672321424",
+    "category": "J2ME",
+    "price": 39.99,
+    "description": "Sams Teach Yourself Wireless Java with J2ME in 21 Days begins by establishing the basic parameters of J2ME development and its uses in building wireless applications. The tutorial chapters introduce both text and graphical application development for typical wireless devices. Finally, the book presents the major types of applications that the wireless developer will build-information management, communications, games, etc. The book also introduces the basic concepts of networking wireless devices through Java.",
+    "image": "assets/images/books/stywjwj2me.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Wireless Java Programming with Java 2 Micro Edition",
+    "pub_date": "2001-05-24",
+    "isbn": "672321351",
+    "category": "J2ME",
+    "price": 49.99,
+    "description": "Wireless Device Programming with Java 2 Micro Edition assumes readers are motivated to build the next generation wireless application by leveraging the J2ME technology. The book provides commercial-quality code and examples primarily based on the industry-leading Motorola phone emulator.",
+    "image": "assets/images/books/wjpwj2me.jpg"
+  },
+  {
+    "id": 4,
+    "title": "Developing Java Servlets, Second Edition",
+    "pub_date": "2001-05-21",
+    "isbn": 672321076,
+    "category": "Java",
+    "price": 39.99,
+    "description": "Developing Java Servlets, Second Edition, is a comprehensive, code-intensive book for professional Java developers. It explains the Java \n Servlet API architecture and client/server development concepts and contains detailed, professional programming techniques for building sophisticated e-commerce and database \n servlet applications. New topics covered in the updated edition are: JavaMail; Servlets with XML, JSP, and EJB; Pluggable web applications; Wireless servlets with WML/WMLScripts.",
+    "image": "assets/images/books/djs.jpg"
+  },
+  {
+    "id": 5,
+    "title": "Oracle and Java Development",
+    "pub_date": "2001-08-17",
+    "isbn": "672321173",
+    "category": "Java",
+    "price": 39.99,
+    "description": "Oracle and Java Application Development describes Oracle's Internet Computing Platform for developing applications; outlines Key Oracle Java technologies like Enterprise Java Beans, Business Components, Java Server Pages, and Servlets for developing and deploying applications using Oracle 8i;.describes the creation of dynamic Web content with Java.; and covers database interaction with Java using Java stored procedures, JDBC, and SQLJ.",
+    "image": "assets/images/books/oajd.jpg"
+  },
+  {
+    "id": 6,
+    "title": "Sams Teach Yourself Java 2 in 21 Days, Professional Reference Edition, Second Edition",
+    "pub_date": "2001-05-21",
+    "isbn": "672320614",
+    "category": "Java",
+    "price": 49.99,
+    "description": "Sams Teach Yourself Java in 21 Days continues to be one of the most popular, best-selling Java tutorials on the market. It has been acclaimed for its clear and personable writing, for its extensive use of examples, and for its logical and complete organization. The Professional Reference Edition of the book includes an extra seven chapters covering advanced topics like object serialization, remote method invocation, accessibility, security, JavaBeans, JDBC, and advanced data structures - as well as a 200-page reference section detailing the most commonly used aspects of the Java language. This edition of the book has been updated and revised to cover version 1.3 of the Java 2 Standard Edition SDK, and the book's CD-ROM includes a fully functional Java compiler, as well as the books source code and a collection of third-party Java development tools and utilities.",
+    "image": "assets/images/books/styj2.jpg"
+  },
+  {
+    "id": 7,
+    "title": "Sams Teach Yourself JavaServer Pages in 24 Hours",
+    "pub_date": "2000-12-18",
+    "isbn": "672320231",
+    "category": "Java",
+    "price": 29.95,
+    "description": "Sams Teach Yourself JavaServer Pages in 24 Hours guarantees to teach 24 one-hour lessons on JSP and its ties to other J2EE technologies, including Servlets and JDBC. Additionally, this book covers the comprehensive development of JSPs using tools such as BEA's WebLogic Server and Apache Tomcat. Each lesson builds on the previous one, allowing the reader to understand the subject of JSPs from the ground-up.",
+    "image": "assets/images/books/styjsp.jpg"
+  }
+]

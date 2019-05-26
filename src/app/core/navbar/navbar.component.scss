@@ -1,22 +1,8 @@
-@import '~bootstrap/scss/functions';
-@import '~bootstrap/scss/variables';
-
 :host {
     display: block;
     box-shadow: 0 0 2px #aaa;
 }
 
-.navbar {
-  padding: 0.2rem 1rem;
-
-  ul.navbar-nav {
-    .nav-item {
-      margin-left: 0.5em;
-    }
-  }
-
-  a.nav-link {
-    font-weight: 400;
-  }
+.ng-fa-icon{
+  padding: 0.2rem;
 }
-  
