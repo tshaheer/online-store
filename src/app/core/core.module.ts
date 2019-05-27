@@ -8,6 +8,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressRouterModule } from '@ngx-progressbar/router';
 import { NgProgressHttpModule } from '@ngx-progressbar/http';
 import { ToastrModule } from 'ngx-toastr'; 
+import { NgxWebstorageModule } from 'ngx-webstorage';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -25,6 +26,7 @@ import { SharedModule } from '../shared/shared.module';
     NgProgressHttpModule, 
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
+    NgxWebstorageModule.forRoot({ prefix: 'bs', separator: '-' })
   ],
   exports: [NavbarComponent, FooterComponent, 
     RouterModule, 
@@ -33,7 +35,8 @@ import { SharedModule } from '../shared/shared.module';
     NgProgressRouterModule, 
     NgProgressHttpModule,
     BrowserAnimationsModule,
-    ToastrModule
+    ToastrModule,
+    NgxWebstorageModule
   ],
   declarations: [NavbarComponent, FooterComponent]
 })

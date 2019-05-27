@@ -15,3 +15,15 @@ export interface ICart {
     book: IBook;
     quantity: number;
 }
+
+export interface IUserLogin {
+    email: string;
+    password: string;
+}
+
+export interface IAccount {
+    name: string;
+    email: string;
+    password: string;
+}
+
