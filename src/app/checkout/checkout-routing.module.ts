@@ -2,14 +2,16 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { CheckoutComponent } from './checkout.component';
+import { CheckoutGuard } from './guards/checkout.guard';
 
 const routes: Routes = [
-  { path: '', component: CheckoutComponent }
+  { path: '', component: CheckoutComponent, canActivate: [ CheckoutGuard ] }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers: [CheckoutGuard]
 })
 export class CheckoutRoutingModule {
   static components = [CheckoutComponent];
