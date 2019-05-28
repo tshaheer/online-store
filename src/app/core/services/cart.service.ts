@@ -7,9 +7,7 @@ import { ICart } from 'src/app/shared/interfaces';
   providedIn: 'root'
 })
 export class CartService {
-
   cartListSubject = new BehaviorSubject([]);
-  toggleCartSubject = new BehaviorSubject(false);
 
   constructor() { }
 
@@ -27,12 +25,12 @@ export class CartService {
     this.cartListSubject.next(current);
   }
 
-  toggleCart() {
-    this.toggleCartSubject.next(!this.toggleCartSubject.getValue());
-  }
-
   reloadCart(cartList: ICart[]) {
     this.cartListSubject.next(cartList);
+  }
+
+  clearCart() {
+    this.cartListSubject.next([]);
   }
 
 }

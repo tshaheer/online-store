@@ -10,4 +10,6 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class CartRoutingModule { }
+export class CartRoutingModule { 
+  static components = [ CartComponent ];
+}

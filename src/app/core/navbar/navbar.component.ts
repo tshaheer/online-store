@@ -3,7 +3,6 @@ import { Router } from '@angular/router';
 
 import { ToastrService } from 'ngx-toastr';
 
-import { CartService } from '../services/cart.service';
 import { AccountService } from '../services/account.service';
 
 @Component({
@@ -15,7 +14,7 @@ export class NavbarComponent implements OnInit {
   isNavbarCollapsed: boolean;
 
   constructor(private router: Router, private toastrService: ToastrService,
-    private cartService: CartService, private accountService: AccountService) {
+    private accountService: AccountService) {
     this.isNavbarCollapsed = true;
   }
 
@@ -39,12 +38,6 @@ export class NavbarComponent implements OnInit {
 
   toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
-  }
-
-  toggleCartPopup(event) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.cartService.toggleCart()
   }
 
 }

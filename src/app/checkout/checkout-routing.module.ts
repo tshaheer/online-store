@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AboutComponent } from './about.component';
+
+import { CheckoutComponent } from './checkout.component';
 
 const routes: Routes = [
-  { path: '', component: AboutComponent },
+  { path: '', component: CheckoutComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AboutRoutingModule {
-  static components = [ AboutComponent ];
+export class CheckoutRoutingModule {
+  static components = [CheckoutComponent];
 }

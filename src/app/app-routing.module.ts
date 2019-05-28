@@ -6,6 +6,8 @@ const routes: Routes = [
   { path: 'books', loadChildren: './books/books.module#BooksModule' },
   { path: 'about', loadChildren: './about/about.module#AboutModule' },
   { path: 'cart', loadChildren: './cart/cart.module#CartModule' },
+  { path: 'checkout', loadChildren: './checkout/checkout.module#CheckoutModule' },
+  { path: 'orders', loadChildren: './orders/orders.module#OrdersModule' },
   { path: '', pathMatch: 'full' , redirectTo: 'home' },
 ];
 

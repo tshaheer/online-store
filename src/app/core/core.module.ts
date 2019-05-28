@@ -14,11 +14,11 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { EnsureModuleLoadedOnceGuard } from './ensure-module-loaded-once-guard';
 import { SharedModule } from '../shared/shared.module';
+import { ModalModule } from './modal/modal.module';
 
 @NgModule({
   imports: [
     CommonModule, 
-    SharedModule, 
     RouterModule, 
     HttpClientModule, 
     NgProgressModule, 
@@ -26,7 +26,9 @@ import { SharedModule } from '../shared/shared.module';
     NgProgressHttpModule, 
     BrowserAnimationsModule,
     ToastrModule.forRoot(),
-    NgxWebstorageModule.forRoot({ prefix: 'bs', separator: '-' })
+    NgxWebstorageModule.forRoot({ prefix: 'bs', separator: '-' }),
+    SharedModule, 
+    ModalModule
   ],
   exports: [NavbarComponent, FooterComponent, 
     RouterModule, 
@@ -36,7 +38,8 @@ import { SharedModule } from '../shared/shared.module';
     NgProgressHttpModule,
     BrowserAnimationsModule,
     ToastrModule,
-    NgxWebstorageModule
+    NgxWebstorageModule,
+    ModalModule
   ],
   declarations: [NavbarComponent, FooterComponent]
 })

@@ -27,3 +27,24 @@ export interface IAccount {
     password: string;
 }
 
+export interface IShipping {
+    name: string;
+    email: string;
+    address1: string;
+    address2?: string;
+}
+
+export interface IOrderItem {
+    item: IBook;
+    quantity: number;
+    total: number;
+}
+
+export interface IOrder {
+    email: string;
+    orderNumber: number;
+    orderDate: Moment;
+    orderTotal: number;
+    shipping?: IShipping;
+    orderItems?: IOrderItem[];
+}

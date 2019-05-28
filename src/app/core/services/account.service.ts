@@ -41,8 +41,14 @@ export class AccountService {
   }
 
   isAuthenticated(): boolean {
-    let user = this.sessionStorage.retrieve('authenticatedUser');
-    return !(user === null)
+    let email = this.sessionStorage.retrieve('authenticatedUser');
+    return !(email === null)
+  }
+
+  getLoggedInUser(): IAccount {
+    let users = this.getUsers();
+    let email = this.sessionStorage.retrieve('authenticatedUser');
+    return users.find(u => u.email === email);
   }
 
   // helper functions

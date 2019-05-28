@@ -1,0 +1,55 @@
+<div class="container mb-4">
+  <div class="container border text-left">
+    <div class="row">
+      <div class="col-6">Name: {{ order.shipping.name}}</div>
+    </div>
+    <div class="row">
+      <div class="col-6">Email: {{ order.shipping.email}}</div>
+    </div>
+    <div class="row">
+      <div class="col-6">Address1: {{ order.shipping.address1}}</div>
+    </div>
+    <div class="row">
+      <div class="col-6">Address1: {{ order.shipping.address2}}</div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="table-responsive">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>&nbsp;</th>
+              <th scope="col" class="text-left">Product</th>
+              <th scope="col" class="text-right">Price</th>
+              <th scope="col" class="text-center">Quantity</th>
+              <th scope="col" class="text-center">Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let orderItem of order.orderItems;let i = index">
+              <td><img [src]="orderItem.item.image" class="img-fluid" alt="" width="100px" height="100px"> </td>
+              <td>{{ orderItem.item.title }}</td>
+              <td>{{ orderItem.item.price | currency: 'USD'}}</td>
+              <td>{{ orderItem.quantity }}</td>
+              <td class="text-right">{{orderItem.total | currency: 'USD' }}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td colspan="2" class="text-right">Sub-Total</td>
+              <td class="text-right">{{order.orderTotal | currency :'USD'}}</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td colspan="2" class="text-right"><strong>Total</strong></td>
+              <td class="text-right"><strong>{{order.orderTotal | currency :'USD'}}</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </div>
+</div>
